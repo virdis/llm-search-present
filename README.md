@@ -16,4 +16,5 @@ Learning about LLM Search - Tokenization, Token IDs, Embeddings, Hypothetical Do
 [vector](https://github.com/stainless-steel/vector)
 
 ## HyDE (Hypothetical Document Embeddings)
+[HyDE](https://deepwiki.com/NirDiamant/RAG_Techniques/3.1-hype-hypothetical-prompt-embeddings)
 [HyDE](https://zilliz.com/learn/improve-rag-and-information-retrieval-with-hyde-hypothetical-document-embeddings)
