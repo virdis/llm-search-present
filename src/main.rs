@@ -204,8 +204,6 @@ async fn search_docs(
 
 #[tokio::main]
 async fn main() -> Result<()> {
-    println!("Hello, world!");
-
     let embedder = MyEmbedder::new().unwrap();
 
     let approx_nearest_neigh = build_index(&embedder).await.unwrap();
