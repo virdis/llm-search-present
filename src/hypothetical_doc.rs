@@ -12,6 +12,7 @@ use vector::Vector;
 
 use crate::{approx_nearest_neigh::AppoxNearestNeighor, myembedder::MyEmbedder};
 
+// HyDe
 pub struct HypotheticalDoc<'a> {
     pub embedder: MyEmbedder,
     pub approx_near_neigh: &'a AppoxNearestNeighor,
@@ -50,7 +51,7 @@ impl<'a> HypotheticalDoc<'a> {
         }
     }
 
-    // No re-ranking
+    // No re-ranking, but Jina model supports re-ranking
     pub async fn retrieve(&self, query: &str, k: usize) -> anyhow::Result<HypotheticalResponse> {
         let hypothetical_document = self.generate_hypothetical_document(query).await?;
         let results = self.similarity_search(&hypothetical_document, k).await?;

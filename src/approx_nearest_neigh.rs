@@ -1,5 +1,6 @@
 use vector::{Index, Vector};
 
+// Talk about HNSW
 pub struct AppoxNearestNeighor {
     pub index: Index<512>,
     pub vectors: Vec<Vector<512>>, // D = dimensions

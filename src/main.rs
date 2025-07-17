@@ -205,7 +205,6 @@ async fn search_docs(
 #[tokio::main]
 async fn main() -> Result<()> {
     let embedder = MyEmbedder::new().unwrap();
-
     let approx_nearest_neigh = build_index(&embedder).await.unwrap();
     let query_string = "Find code that adds two numbers";
     let res = search_docs(embedder, &approx_nearest_neigh, query_string, 1000)
